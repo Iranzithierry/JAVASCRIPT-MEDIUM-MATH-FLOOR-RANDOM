@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="style.css" />
+<button class="show" onclick="getcountry()">show</button>
+<div class="container"></div>
+
+<script>
+  function getcountry() {
+    const container = document.querySelector(".container");
+
+    fetch("https://ipapi.co/json/")
+      .then((Response) => Response.json())
+      .then((data) => {
+        const { country_name } = data;
+        const { country_code } = data;
+        const { city } = data;
+        const { latitude } = data;
+        const { longitude } = data;
+        const { ip } = data;
+
+        var country = country_code;
+        switch (country) {
+          case "RW":
+            const box = document.createElement("div");
+            box.classList.add("div-box");
+            alert("Looks Like You Are From " + country_name+"");
+            box.innerHTML =
+              country_name +
+              " And This Is Your Country Code (" +
+              country_code +
+              ") And This IS Your Country City (" +
+              city +
+              ") And This IS Your Latitude(" +
+              latitude +
+              ")  And This Is Your Longititude (" +
+              longitude +
+              ") And This Is Your IP Address(" +
+              ip+
+              ")"
+              ;
+            container.appendChild(box);
+            break;
+
+          default:
+            alert("This Program Only Allowed People From Rwanda Only ");
+            break;
+        }
+      })
+      .catch((error) => console.error(error));
+  }
+</script>

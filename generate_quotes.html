@@ -1,0 +1,25 @@
+<button class="show">SHOW</button>
+<div class="quotes"></div>
+<link rel="stylesheet" href="style.css">
+<script>
+ const show = document.querySelector(".show");
+ const quotes = document.querySelector(".quotes");
+
+ show.addEventListener("click",()=>{
+    quotes.innerHTML ="";
+    const quotes_array = [
+        "DONT GIVE IT UP",
+        "GIVE IT UP",
+        "ITS UP TO YOU",
+        "KEEP QUITE"
+    ];
+    
+    random = quotes_array[Math.floor(Math.random() * quotes_array.length)];
+    randomed = `${random}`;
+
+    const box = document.createElement("div");
+    box.classList.add('div-box');
+    box.innerHTML = randomed;
+    quotes.appendChild(box);
+ })
+</script>

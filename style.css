@@ -1,0 +1,92 @@
+@import url("font.css");
+*{
+    font-family: 'Poppins';
+
+}
+body{
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+.buttons{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    margin-left: 26px;
+    background-color: #f5f5f5;;
+}
+.box {
+  padding: 50px;
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.4s ease-in-out;
+ 
+}
+input{
+    width: 50px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border: 1px solid purple;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+
+}
+.wrapper{
+    margin-top: 90px;
+}
+span{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    color: purple;
+    font-size: 20px;
+    border-radius: 4px;
+    
+    background-color: #c792c0;
+    cursor: pointer;
+}
+.div-box{
+    position: relative;
+    border-radius: 8px;
+    height: 50px;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    border: 1px solid #ccc;
+    background-color: #ded8d8;
+    font-size: 20px;
+    color: #333;
+    margin: 10 5;
+    padding: 10px;
+}
+.javascript_colors {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+ 
+}
+.php_colors {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #4070f4;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="buttons">
+      <button class="javascript_random">Random Color javascript</button>
+    </div>
+    <div class="wrapper">
+      <div class="javascript_colors"></div>
+    </div>
+  </body>
+
+  <script>
+    const javascript_random = document.querySelector(".javascript_random");
+    const javascript_colors = document.querySelector(".javascript_colors");
+
+    javascript_random.addEventListener("click", function () {
+      javascript_colors.innerHTML = "";
+      let colors = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+
+      colors.forEach((color) => {
+        let randomHex = Math.floor(Math.random() * 0xffffff).toString(16);
+        randomHex = `#${randomHex.padStart(6, "0")}`;
+
+        const box = document.createElement("div");
+        box.classList.add("box");
+        box.style.backgroundColor = randomHex;
+        box.innerHTML = randomHex;
+
+        javascript_colors.appendChild(box);
+      });
+    });
+  </script>
+</html>
