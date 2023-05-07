@@ -35,7 +35,7 @@ To generate a new color, click the "New Color" button. To copy the hexadecimal v
 - Add more customization options for the generated phone numbers (e.g., country code, phone number length, etc.).
 - Improve the design and user experience of the application.
 <h3>Credits</h3>
-The idea and code for this application were developed by <b>IRANZI THIERRY</b>. The phone number generation algorithm used in this application was inspired by similar algorithms found on the internet. This project was inspired by this tutorial by Traversy Media. Special thanks to <b>@nigorjeanluc</b> for their support.
+The idea and code for this application were developed by <b>IRANZI THIERRY</b>. The phone number generation algorithm used in this application was inspired by similar algorithms found on the internet. This project was inspired by this tutorial by Traversy Media. Special thanks to <b><a href "@Nigorjeanluc">@Nigorjeanluc</a></b> for their support.
 <h3>Project Timeline</h3>
 This project was completed from May 5th to May 7th.
 <h3>School Course Reference</h3>
