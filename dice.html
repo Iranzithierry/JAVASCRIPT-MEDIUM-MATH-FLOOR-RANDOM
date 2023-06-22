@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <div class="body">
+    <div class="dices">
+      <div class="dice">
+        <h1 class="side"></h1>
+      </div>
+    </div>
+    <button class="btn">ROLL DICE</button>
+  </div>
+
+  <script>
+    const side = document.querySelector(".side");
+    const dice = document.querySelector(".dice");
+    const roll_btn = document.querySelector(".btn");
+
+    roll_btn.addEventListener("click", (event) => {
+      side.classList.add("roll-animation");
+      setTimeout(() => {
+        side.classList.remove("roll-animation");
+        rollDice();
+      }, 500);
+    });
+    function rollDice() {
+      let click = [
+        "&#9856;",
+        "&#9857;",
+        "&#9858;",
+        "&#9859;",
+        "&#9860;",
+        "&#9861;",
+      ];
+      click.forEach((clicks) => {
+        const randomly_number = click[Math.floor(Math.random() * click.length)];
+        side.innerHTML = randomly_number;
+      });
+    }
+  </script>
+</html>

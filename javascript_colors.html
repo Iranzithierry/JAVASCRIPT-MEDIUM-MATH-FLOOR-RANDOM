@@ -11,19 +11,23 @@
   <body>
     <div class="buttons">
       <button class="javascript_random">Random Color javascript</button>
+      <div class="me">DA TRUE</div>
     </div>
     <div class="wrapper">
+      <div class="palette">
       <div class="javascript_colors"></div>
+    </div>
     </div>
   </body>
 
   <script>
     const javascript_random = document.querySelector(".javascript_random");
     const javascript_colors = document.querySelector(".javascript_colors");
+    const pallete = document.querySelector(".palette");
 
     javascript_random.addEventListener("click", function () {
       javascript_colors.innerHTML = "";
-      let colors = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+      let colors = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
       colors.forEach((color) => {
         let randomHex = Math.floor(Math.random() * 0xffffff).toString(16);
@@ -33,8 +37,27 @@
         box.classList.add("box");
         box.style.backgroundColor = randomHex;
         box.innerHTML = randomHex;
+        const copybtn = document.createElement("span");
+        copybtn.innerHTML = "copy";
+        copybtn.addEventListener("click", function(e){
+          const text = box.innerText;
+          const hex_only = text.replace(/copy/g,"");
+          navigator.clipboard
+          .writeText(hex_only)
+          .then(() => {
+            copybtn.innerHTML = "copied";
+             setTimeout(()=>{
+              copybtn.innerHTML = "copy";
+             },6000)
+            })
+            .catch((err) => {
+              console.error(`Failed to copy text: ${err}`);
+          })
 
+        })
+        box.appendChild(copybtn);
         javascript_colors.appendChild(box);
+        javascript_random.innerHTML = "GENERATE OTHERS";
       });
     });
   </script>

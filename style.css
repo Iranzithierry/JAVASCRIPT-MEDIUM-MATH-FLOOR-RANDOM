@@ -5,26 +5,59 @@
 }
 body{
     padding: 20px;
-    background-color: #f5f5f5;
+    background: #e3f2fd;
+   
 }
 .buttons{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 99999;
     position: fixed;
     margin-left: 26px;
     background-color: #f5f5f5;;
+    display: flex;
+    justify-content: space-between;
+}
+.me {
+    right: 0;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
 }
 .box {
   padding: 50px;
   margin: 10px;
   width: 150px;
   height: 50px;
-  border-radius: 8px;
+  color: #00000000 transparent;
+  font-size: 22px;
   text-align: center;
   justify-content: center;
   transition: all 0.4s ease-in-out;
+  position: relative;
+  border: 10px solid #f5f5f5;
+  border-radius: 6px;
  
+}
+.numbers{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.box:hover {
+    filter: brightness(129%);
+    cursor: pointer;
 }
 input{
     width: 50px;
@@ -39,16 +72,26 @@ input{
 .wrapper{
     margin-top: 90px;
 }
+.palette{
+    position: relative;
+}
 span{
     right: 0;
     bottom: 0;
     position: absolute;
-    color: purple;
+    color: #000;
     font-size: 20px;
-    border-radius: 4px;
-    
-    background-color: #c792c0;
+    border-top-left-radius: 4px;
+    background-color: #f4f4f4;
     cursor: pointer;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.4s;
+}
+span:hover{
+    background-color: #86a0bd;
+}
+.box:hover{
+    border: 10px solid#86a0bd;
 }
 .div-box{
     position: relative;
@@ -74,6 +117,7 @@ span{
 .php_colors {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 30px;
 }
 
 button{
@@ -90,3 +134,108 @@ button{
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #b431f7;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    border-radius: 20%;
+    padding: 20px;
+    top: 13px;
+
+    
+}
+.time {
+
+    background-color: #fff;
+    height: 80px;
+    width: 80px;
+    margin: 0 10px;
+    border-radius: 20%;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+   
+    
+}
+.ad_on{
+   height: 82px;
+   align-items: flex-end;
+   display: flex;
+   user-select: none;
+   font-size: 22px;
+    
+    
+}
+.dot {
+  user-select: none;
+}
+
+.dice {
+
+    background-color: #fff;
+    height: 80px;
+    width: 80px;
+    margin: 0 10px;
+    border-radius: 20%;
+    color: #000000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+   
+    
+}
+.dices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    background-color: #b431f7;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20%;
+    padding: 20px;
+  
+}
+.body {
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+   position: relative;
+   overflow-y: hidden;
+   overflow-x: hidden;
+}
+
+.roll-animation {
+    animation-name: roll 0.2s linear infinite;
+  }
+  
+  @keyframes roll {
+    0% {
+      opacity: 0;
+    }
+  50%{
+    opacity: 0.7;
+  }
+    100% {
+     opacity: 1;
+    }
+  }
+  

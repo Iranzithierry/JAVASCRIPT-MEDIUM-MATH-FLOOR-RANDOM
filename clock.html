@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="time hr"></div>
+      <h1 class="dot">:</h1>
+      <div class="time min"></div>
+      <h1 class="dot">:</h1>
+      <div class="time sec"></div>
+      <div class="ad_on"></div>
+    </div>
+    <script>
+      const hours_bar = document.querySelector(".hr");
+      const minutes_bar = document.querySelector(".min");
+      const seconds_bar = document.querySelector(".sec");
+      const when = document.querySelector(".ad_on");
+      const clock_pad = document.querySelector(".clock")
+
+      setInterval(() => {
+        const getclock = new Date();
+        let hr = getclock.getHours();
+        let sec = getclock.getSeconds();
+        let min = getclock.getMinutes();
+
+        let timetostring = `${hr}${min}${sec}`;
+        if (hr < 10) {
+          hr = `0${hr}`;
+        }
+        if (min < 10) {
+          min = `0${min}`;
+        }
+        if (sec < 10) {
+          sec = `0${sec}`;
+        }
+        if (hr > 12) {
+          when.innerHTML = "PM";
+          clock_pad.style.backgroundColor = "#000";
+        } else {
+          when.innerHTML = "AM";
+        }
+
+        hours_bar.innerHTML = hr;
+        minutes_bar.innerHTML = min;
+        seconds_bar.innerHTML = sec;
+      }, 1000);
+    </script>
+  </body>
+</html>
